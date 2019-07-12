@@ -1,5 +1,5 @@
 hours:
-    label: offline.openinghours::lang.common.hours
+    label: offline.openinghours::lang.common.hours_label
     deferredBinding: true
     view:
         list: $/offline/openinghours/models/hour/columns.yaml

@@ -9,6 +9,7 @@
         'slug'                => 'Slug',
         'weekday'             => 'Weekday',
         'hours'               => 'Opening hours',
+        'hours_label'         => 'opening hours',
         'note'                => 'Note',
         'location'            => 'Location',
         'hours_special'       => 'Special opening hours',
@@ -50,6 +51,10 @@
         'opening_hours' => [
             'name'        => 'Opening Hours',
             'description' => 'Displays opening hours',
+            'slug'        => [
+                'title'       => 'Location slug',
+                'description' => 'Fetch a specific location by its slug',
+            ],
         ],
     ],
 ];

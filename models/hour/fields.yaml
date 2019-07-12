@@ -3,6 +3,12 @@ fields:
         label: 'offline.openinghours::lang.common.weekday'
         span: auto
         type: balloon-selector
+        context: update
+    weekdays:
+        label: 'offline.openinghours::lang.common.weekday'
+        span: auto
+        type: checkboxlist
+        context: create
     note:
         label: 'offline.openinghours::lang.common.note'
         span: auto

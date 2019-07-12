@@ -12,6 +12,13 @@ class Plugin extends PluginBase
         ];
     }
 
+    public function registerPageSnippets()
+    {
+        return [
+            OpeningHours::class => 'openingHoursSnippet',
+        ];
+    }
+
     public function registerSettings()
     {
     }

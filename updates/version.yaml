@@ -3,3 +3,5 @@
     - create_offline_openinghours_locations.php
     - create_offline_openinghours_hours.php
     - create_offline_openinghours_exceptions.php
+1.0.2:
+    - 'Added batch creation for opening hours'

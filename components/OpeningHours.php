@@ -42,13 +42,29 @@ class OpeningHours extends ComponentBase
 
     public function defineProperties()
     {
-        return [];
+        return [
+            'slug' => [
+                'title'       => 'offline.openinghours::lang.components.opening_hours.slug.title',
+                'description' => 'offline.openinghours::lang.components.opening_hours.slug.description',
+                'type'        => 'dropdown',
+            ],
+        ];
+    }
+
+    public function getSlugOptions()
+    {
+        return Location::orderBy('sort_order', 'ASC')->get()->pluck('name', 'slug')->toArray();
     }
 
     public function onRun()
     {
         $this->locations       = Location::with('hours', 'exceptions')->orderBy('sort_order')->get();
         $this->locationsBySlug = $this->locations->keyBy('slug');
-        $this->location        = $this->locations->first();
+
+        $slug = $this->property('slug');
+
+        $this->location = $slug
+            ? $this->locationsBySlug->get($slug)
+            : $this->location = $this->locationsBySlug->first();
     }
 }

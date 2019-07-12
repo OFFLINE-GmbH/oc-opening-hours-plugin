@@ -9,6 +9,7 @@
         'slug'                => 'Slug',
         'weekday'             => 'Wochentag',
         'hours'               => 'Öffnungszeiten',
+        'hours_label'         => 'Öffnungszeiten',
         'note'                => 'Bemerkung',
         'location'            => 'Standort',
         'hours_special'       => 'Sonderöffnungszeiten',
@@ -50,6 +51,10 @@
         'opening_hours' => [
             'name'        => 'Öffnungszeiten',
             'description' => 'Zeigt Öffnungszeiten an',
+            'slug'        => [
+                'title'       => 'Slug eines Standorts',
+                'description' => 'Lädt einen spezifischen Standort gemäss slug',
+            ],
         ],
     ],
 ];

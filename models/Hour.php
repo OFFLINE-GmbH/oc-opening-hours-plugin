@@ -19,4 +19,15 @@ class Hour extends Model
     public $belongsTo = [
         'location' => Location::class,
     ];
+    
+    /**
+     * Alias for getWeekdaysOption, used for checkbox list
+     * in create context.
+     *
+     * @return array
+     */
+    public function getWeekdaysOptions()
+    {
+        return $this->getWeekdayOptions();
+    }
 }
