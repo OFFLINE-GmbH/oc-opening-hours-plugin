@@ -18,7 +18,7 @@
             {% else %}
                 {# The days are not in sequence, display it as Mo, Tu, We #}
                 {% for day in range.days %}
-                    {{ trans[day] }}{% if not loop.last %},{% endif %}
+                    {{ trans[day] }}{% if not loop.last %}, {% endif %}
                 {% endfor %}
             {% endif %}
 
