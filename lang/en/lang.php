@@ -27,8 +27,7 @@
         'yearly_comment' => 'This rule repeats every year on the same date',
     ],
     'exceptions'  => [
-        'is_closed'         => 'The location is closed on this day',
-        'is_closed_comment' => 'Disable this option to enter special opening hours for this date',
+        'hours_comment' => 'Leave empty is the location is closed on this date',
     ],
     'permissions' => [
         'manage' => 'Can manage opening hours',

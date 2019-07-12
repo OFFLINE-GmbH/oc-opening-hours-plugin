@@ -27,8 +27,7 @@
         'yearly_comment' => 'Die Ausnahme wird jedes Jahr am gleichen Datum wieder aktiv',
     ],
     'exceptions'  => [
-        'is_closed'         => 'Der Standort ist an diesem Tag geschlossen',
-        'is_closed_comment' => 'Deaktivere diese Option um Sonderöffnungszeiten für das Datum zu erfassen',
+        'hours_comment' => 'Leer lassen, falls der Standort geschlossen bleibt',
     ],
     'permissions' => [
         'manage' => 'Kann Öffnungszeiten verwalten',

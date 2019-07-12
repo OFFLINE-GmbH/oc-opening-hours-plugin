@@ -13,20 +13,11 @@ fields:
         span: auto
         type: switch
         comment: 'offline.openinghours::lang.date.yearly_comment'
-    _is_closed:
-        label: 'offline.openinghours::lang.exceptions.is_closed'
-        span: auto
-        type: switch
-        default: 1
-        comment: 'offline.openinghours::lang.exceptions.is_closed_comment'
     hours:
         label: 'offline.openinghours::lang.common.hours_special'
         prompt: 'offline.openinghours::lang.common.add'
+        comment: 'offline.openinghours::lang.exceptions.hours_comment'
         span: full
-        trigger:
-            action: show
-            field: _is_closed
-            condition: unchecked
         type: repeater
         form:
             fields:
