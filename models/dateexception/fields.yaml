@@ -1,9 +1,4 @@
 fields:
-    yearly:
-        label: 'offline.openinghours::lang.date.yearly'
-        span: full
-        type: switch
-        comment: 'offline.openinghours::lang.date.yearly_comment'
     for_date:
         label: 'offline.openinghours::lang.date.for'
         mode: date
@@ -13,10 +8,14 @@ fields:
         label: 'offline.openinghours::lang.common.note'
         span: auto
         type: text
+    yearly:
+        label: 'offline.openinghours::lang.date.yearly_comment'
+        span: full
+        type: checkbox
     hours:
         label: 'offline.openinghours::lang.common.hours_special'
         prompt: 'offline.openinghours::lang.common.add'
-        comment: 'offline.openinghours::lang.exceptions.hours_comment'
+        commentAbove: 'offline.openinghours::lang.exceptions.hours_comment'
         span: full
         type: repeater
         form:
