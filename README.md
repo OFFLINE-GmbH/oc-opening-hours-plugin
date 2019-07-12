@@ -1,25 +1,23 @@
 # oc-opening-hours-plugin
 
-Manage and display opening hours on your website
+> Manage and display opening hours on your website.
 
 ## Features
 
 This plugins allows you to store opening hours for multiple locations and display them on your website.
 
-It wraps the great [`spatie/opening-hours`](https://github.com/spatie/opening-hours) library. You have direct access to all of the library's features.
+It makes use of the great [`spatie/opening-hours`](https://github.com/spatie/opening-hours) library. You have direct access to all of the library's features.
 
 * Store opening hours for multiple locations
 * Set opening hours for each day of the week
 * Add exceptions for specific dates
 * Display the opening hours on your website
-* Schema.org compatible example markup provided
+* Schema.org compatible [example markup](components/openinghours/) provided
 
 
-## Components
+## `OpeningHours` component
 
-This plugin provides only a single `OpeningHours` component.
-
-This component can be used to display all opening hours for all locations.
+This plugin provides only a single `OpeningHours` component. It can be used to display all opening hours for all locations.
 
 ```twig
 [openingHours]
@@ -29,7 +27,7 @@ This component can be used to display all opening hours for all locations.
 	{{ dump(location.openingHours.forWeek()) }}
 {% endfor %}
 
-{# If you have only one location you can access it directly #}
+{# If you have only a single location you can access it directly #}
 {{ dump(openingHours.location.openingHours.forWeek()) }}
 
 {# You can also access a specific location by its slug #}
