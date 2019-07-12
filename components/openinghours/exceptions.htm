@@ -1,0 +1,15 @@
+<ul>
+    {% for date, hours in location.openingHours.exceptions() %}
+        <li itemprop="openingHoursSpecification" itemscope
+            itemtype="http://schema.org/OpeningHoursSpecification">
+
+            {{ __SELF__.handleYearlyDate(date).format('Y-m-d') }}:
+
+            {% partial __SELF__ ~ '::hours' hours=hours %}
+
+            {% if hours.getData() %}
+                ({{ hours.getData() }})
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

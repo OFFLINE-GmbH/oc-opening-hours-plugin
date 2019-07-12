@@ -1,0 +1,18 @@
+hours:
+    label: offline.openinghours::lang.common.hours
+    deferredBinding: true
+    view:
+        list: $/offline/openinghours/models/hour/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/offline/openinghours/models/hour/fields.yaml
+        recordsPerPage: 10
+exceptions:
+    label: offline.openinghours::lang.common.hours_special_label
+    deferredBinding: true
+    view:
+        list: $/offline/openinghours/models/dateexception/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/offline/openinghours/models/dateexception/fields.yaml
+        recordsPerPage: 10

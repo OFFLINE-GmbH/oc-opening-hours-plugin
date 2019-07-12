@@ -1,0 +1,15 @@
+title: 'offline.openinghours::lang.common.location'
+modelClass: OFFLINE\OpeningHours\Models\Location
+list: $/offline/openinghours/models/location/columns.yaml
+recordUrl: 'offline/openinghours/locations/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+defaultSort:
+    column: sort_order
+    direction: asc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

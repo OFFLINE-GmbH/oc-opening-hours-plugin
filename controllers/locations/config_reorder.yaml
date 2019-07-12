@@ -1,0 +1,5 @@
+title: 'offline.openinghours::lang.titles.locations.reorder'
+modelClass: OFFLINE\OpeningHours\Models\Location
+nameFrom: sort_order
+toolbar:
+    buttons: reorder_toolbar

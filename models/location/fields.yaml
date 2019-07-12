@@ -1,0 +1,28 @@
+fields:
+    name:
+        label: 'offline.openinghours::lang.common.name'
+        span: auto
+        type: text
+    slug:
+        label: 'offline.openinghours::lang.common.slug'
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+
+tabs:
+    fields:
+        hours:
+            tab: 'offline.openinghours::lang.common.hours'
+            type: partial
+            path: hours
+            context: update
+            span: left
+
+        exceptions:
+            tab: 'offline.openinghours::lang.common.hours'
+            type: partial
+            path: exceptions
+            context: update
+            span: right

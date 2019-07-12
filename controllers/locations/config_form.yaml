@@ -1,0 +1,10 @@
+name: 'offline.openinghours::lang.common.location'
+modelClass: OFFLINE\OpeningHours\Models\Location
+form: $/offline/openinghours/models/location/fields.yaml
+defaultRedirect: offline/openinghours/locations
+create:
+    redirect: 'offline/openinghours/locations/update/:id'
+    redirectClose: offline/openinghours/locations
+update:
+    redirect: offline/openinghours/locations
+    redirectClose: offline/openinghours/locations

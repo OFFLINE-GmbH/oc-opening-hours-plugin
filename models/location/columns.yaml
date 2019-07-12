@@ -1,0 +1,6 @@
+columns:
+    name:
+        label: 'offline.openinghours::lang.common.name'
+        type: text
+        searchable: true
+        sortable: true

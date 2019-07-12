@@ -1,0 +1,16 @@
+<ul>
+    {% for day, hours in location.openingHours.forWeek() %}
+        <li itemprop="openingHoursSpecification" itemscope
+            itemtype="http://schema.org/OpeningHoursSpecification">
+
+            <link itemprop="dayOfWeek" href="http://schema.org/{{ day | capitalize }}">
+            {{ trans[day] }}:
+
+            {% partial __SELF__ ~ '::hours' hours=hours %}
+
+            {% if hours.getData() %}
+                ({{ hours.getData() }})
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,28 @@
+fields:
+    weekday:
+        label: 'offline.openinghours::lang.common.weekday'
+        span: auto
+        type: balloon-selector
+    note:
+        label: 'offline.openinghours::lang.common.note'
+        span: auto
+        type: text
+tabs:
+    fields:
+        hours:
+            tab: 'offline.openinghours::lang.common.hours'
+            prompt: 'offline.openinghours::lang.common.add'
+            span: full
+            type: repeater
+            form:
+                fields:
+                    from:
+                        label: 'offline.openinghours::lang.hours.from'
+                        span: auto
+                        type: datepicker
+                        mode: time
+                    to:
+                        label: 'offline.openinghours::lang.hours.to'
+                        mode: time
+                        span: auto
+                        type: datepicker

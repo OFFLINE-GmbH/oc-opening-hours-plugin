@@ -1,0 +1,32 @@
+<ul>
+    {% for hours in location.openingHours.forWeekCombined() %}
+        <li>
+
+            {# Build a DayRange helper class from the given data #}
+            {% set range = __SELF__.extractDayRange(hours) %}
+
+            <meta itemprop="openingHours" content="{{ range.getStructuredData() }}">
+
+            {# The days are in sequence, we can display it as From-To #}
+            {% if range.isSequence %}
+                {# It's just a single day! #}
+                {% if range.firstDay == range.lastDay %}
+                    {{ trans[range.firstDay] }}:
+                {% else %}
+                    {{ trans[range.firstDay] }}-{{ trans[range.lastDay] }}:
+                {% endif %}
+            {% else %}
+                {# The days are not in sequence, display it as Mo, Tu, We #}
+                {% for day in range.days %}
+                    {{ trans[day] }}{% if not loop.last %},{% endif %}
+                {% endfor %}
+            {% endif %}
+
+            {% partial __SELF__ ~ '::hours' hours=range.hours %}
+
+            {% if range.hours.getData() %}
+                ({{ range.hours.getData() }})
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

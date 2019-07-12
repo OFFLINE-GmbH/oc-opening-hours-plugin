@@ -1,0 +1,8 @@
+{% for range in hours %}
+    <time itemprop="opens" datetime="{{ range.start }}">{{ range.start }}</time>
+    -
+    <time itemprop="closes"
+          datetime="{{ range.end }}">{{ range.end }}</time>{% if not loop.last %}, {% endif %}
+{% else %}
+    closed
+{% endfor %}

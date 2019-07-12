@@ -1,0 +1,18 @@
+plugin:
+    name: 'offline.openinghours::lang.plugin.name'
+    description: 'offline.openinghours::lang.plugin.description'
+    author: OFFLINE
+    iconSvg: plugins/offline/openinghours/assets/plugin-icon.svg
+    homepage: 'https://github.com/OFFLINE-GmbH/oc-opening-hours-plugin'
+permissions:
+    'offline.openinghours::manage':
+        tab: 'offline.openinghours::lang.common.hours'
+        label: 'offline.openinghours::lang.permissions.manage'
+navigation:
+    opening-hours-main:
+        label: 'offline.openinghours::lang.common.hours'
+        url: offline/openinghours/locations
+        iconSvg: plugins/offline/openinghours/assets/plugin-icon.svg
+        order: 800
+        permissions:
+            - 'offline.openinghours::manage'

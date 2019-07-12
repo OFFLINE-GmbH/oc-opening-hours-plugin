@@ -1,0 +1,39 @@
+columns:
+    for_date:
+        label: 'offline.openinghours::lang.date.for'
+        type: date
+        searchable: true
+        sortable: true
+    yearly:
+        label: 'offline.openinghours::lang.date.yearly'
+        type: switch
+        searchable: true
+        sortable: true
+    hours_string:
+        label: 'offline.openinghours::lang.common.hours'
+        type: text
+        searchable: false
+        sortable: false
+    note:
+        label: 'offline.openinghours::lang.common.note'
+        type: text
+        searchable: true
+        sortable: true
+    location_id:
+        label: 'offline.openinghours::lang.common.location'
+        type: number
+        searchable: true
+        invisible: true
+        sortable: true
+    created_at:
+        label: 'offline.openinghours::lang.date.created_at'
+        type: datetime
+        searchable: true
+        invisible: true
+        sortable: true
+    updated_at:
+        label: 'offline.openinghours::lang.date.updated_at'
+        type: datetime
+        searchable: true
+        invisible: true
+        sortable: true

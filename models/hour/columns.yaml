@@ -1,0 +1,32 @@
+columns:
+    weekday:
+        label: 'offline.openinghours::lang.common.weekday'
+        type: partial
+        path: weekday_translated
+        searchable: true
+        sortable: true
+    hours_string:
+        label: 'offline.openinghours::lang.common.hours'
+        type: text
+        searchable: false
+        sortable: false
+    location_id:
+        label: 'offline.openinghours::lang.common.location'
+        type: number
+        searchable: true
+        sortable: true
+        select: name
+        relation: location
+        invisible: true
+    created_at:
+        label: created_at
+        type: datetime
+        searchable: true
+        invisible: true
+        sortable: true
+    updated_at:
+        label: updated_at
+        type: datetime
+        searchable: true
+        invisible: true
+        sortable: true

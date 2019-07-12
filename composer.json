@@ -1,0 +1,23 @@
+{
+  "name": "offline/oc-opening-hours-plugin",
+  "type": "october-plugin",
+  "description": "Manage and display opening hours on your website",
+  "keywords": [
+    "october",
+    "cms",
+    "opening hours"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tobias Kündig",
+      "email": "tobias@offline.ch"
+    }
+  ],
+  "require": {
+    "composer/installers": "~1.0",
+    "spatie/opening-hours": "^2.5"
+  },
+  "require-dev": {
+  }
+}
