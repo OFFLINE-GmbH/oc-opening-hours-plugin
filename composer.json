@@ -17,7 +17,5 @@
   "require": {
     "composer/installers": "~1.0",
     "spatie/opening-hours": "^2.5"
-  },
-  "require-dev": {
   }
 }

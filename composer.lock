@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6cb95928d3875eb170cf093df741ffd4",
+    "content-hash": "9d6f8e071b8c11e9afce648e97c289c7",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.6.0",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b"
+                "reference": "141b272484481432cda342727a427dc1e206bfa0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/cfcca6b1b60bc4974324efb5783c13dca6932b5b",
-                "reference": "cfcca6b1b60bc4974324efb5783c13dca6932b5b",
+                "url": "https://api.github.com/repos/composer/installers/zipball/141b272484481432cda342727a427dc1e206bfa0",
+                "reference": "141b272484481432cda342727a427dc1e206bfa0",
                 "shasum": ""
             },
             "require": {
@@ -73,6 +73,7 @@
                 "RadPHP",
                 "SMF",
                 "Thelia",
+                "Whmcs",
                 "WolfCMS",
                 "agl",
                 "aimeos",
@@ -95,6 +96,7 @@
                 "installer",
                 "itop",
                 "joomla",
+                "known",
                 "kohana",
                 "laravel",
                 "lavalite",
@@ -124,20 +126,20 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2018-08-27T06:10:37+00:00"
+            "time": "2019-08-12T15:00:31+00:00"
         },
         {
             "name": "spatie/opening-hours",
-            "version": "2.5.0",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/opening-hours.git",
-                "reference": "8a1645e0a01dc7a3a0584232e13d70d0efbaa729"
+                "reference": "bac0ed7d3dcea5d6f048fce6da1b7fe3aeffdccf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/opening-hours/zipball/8a1645e0a01dc7a3a0584232e13d70d0efbaa729",
-                "reference": "8a1645e0a01dc7a3a0584232e13d70d0efbaa729",
+                "url": "https://api.github.com/repos/spatie/opening-hours/zipball/bac0ed7d3dcea5d6f048fce6da1b7fe3aeffdccf",
+                "reference": "bac0ed7d3dcea5d6f048fce6da1b7fe3aeffdccf",
                 "shasum": ""
             },
             "require": {
@@ -160,9 +162,9 @@
             "authors": [
                 {
                     "name": "Sebastian De Deyne",
+                    "role": "Developer",
                     "email": "sebastian@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
+                    "homepage": "https://spatie.be"
                 }
             ],
             "description": "A helper to query and format a set of opening hours",
@@ -174,7 +176,7 @@
                 "schedule",
                 "spatie"
             ],
-            "time": "2019-07-06T13:59:07+00:00"
+            "time": "2019-08-27T07:52:43+00:00"
         }
     ],
     "packages-dev": [],
