@@ -1,9 +1,9 @@
 <ul>
-    {% for date, hours in location.openingHours.exceptions() %}
+    {% for date, hours in __SELF__.handleYearlyDates(location.openingHours.exceptions()) %}
         <li itemprop="openingHoursSpecification" itemscope
             itemtype="http://schema.org/OpeningHoursSpecification">
 
-            {{ __SELF__.handleYearlyDate(date).format('Y-m-d') }}:
+            {{ __SELF__.toCarbon(date).format('d.m.Y') }}:
 
             {% partial __SELF__ ~ '::hours' hours=hours %}
 

@@ -2,7 +2,8 @@
 
 namespace OFFLINE\OpeningHours\Classes;
 
-use Carbon\Carbon;
+use Carbon\Carbon;;
+use Illuminate\Support\Collection;
 
 trait DateUtils
 {
@@ -87,6 +88,18 @@ trait DateUtils
     }
 
     /**
+     * Returns a carbon instance from a Y-m-d string.
+     *
+     * @param string $date
+     *
+     * @return Carbon
+     */
+    public function toCarbon(string $date): Carbon
+    {
+        return Carbon::createFromFormat('Y-m-d', $date);
+    }
+
+    /**
      * Return a Carbon instance of an exception date.
      *
      * If the date has no year and is in the past, intelligently return
@@ -112,6 +125,26 @@ trait DateUtils
         }
 
         return $carbon;
+    }
+
+    /**
+     * Sort a collection with yearly dates.
+     *
+     * @param array|Collection $dates
+     *
+     * @return Collection
+     */
+    public function handleYearlyDates($dates): Collection
+    {
+        $dates = Collection::wrap($dates);
+        $dates = $dates->mapWithKeys(function ($value, $date) {
+            return [$this->handleYearlyDate($date)->format('Y-m-d') => $value];
+        });
+
+        $values = $dates->all();
+        ksort($values);
+
+        return collect($values);
     }
 
     /**

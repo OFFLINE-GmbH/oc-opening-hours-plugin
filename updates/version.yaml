@@ -9,3 +9,5 @@
     - 'Minor backend form updates'
 1.0.4:
     - 'Updated dependencies'
+1.0.5:
+    - 'Added helpers to correctly sort yearly recurring exceptions to opening hours'
