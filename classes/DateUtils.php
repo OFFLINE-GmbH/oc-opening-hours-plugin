@@ -136,6 +136,10 @@ trait DateUtils
      */
     public function handleYearlyDates($dates): Collection
     {
+        if ($dates === null) {
+            return collect([]);
+        }
+
         $dates = Collection::wrap($dates);
         $dates = $dates->mapWithKeys(function ($value, $date) {
             return [$this->handleYearlyDate($date)->format('Y-m-d') => $value];

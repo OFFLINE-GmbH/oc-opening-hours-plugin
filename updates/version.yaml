@@ -13,3 +13,5 @@
     - 'Added helpers to correctly sort yearly recurring exceptions to opening hours'
 1.0.6:
     - 'Added french translations (thanks to @damsfx)'
+1.0.7:
+    - 'Optimized handling of empty DateException collections'
