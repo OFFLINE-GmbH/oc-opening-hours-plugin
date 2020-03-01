@@ -2,6 +2,7 @@
 
 use Model;
 use October\Rain\Database\Traits\Sluggable;
+use October\Rain\Database\Traits\Sortable;
 use October\Rain\Database\Traits\Validation;
 use OFFLINE\OpeningHours\Classes\DateUtils;
 use Spatie\OpeningHours\OpeningHours;
@@ -11,6 +12,7 @@ class Location extends Model
     use Validation;
     use Sluggable;
     use DateUtils;
+    use Sortable;
 
     public $slugs = [
         'slug' => 'name',
