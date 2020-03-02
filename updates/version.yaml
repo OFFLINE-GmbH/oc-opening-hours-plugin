@@ -15,3 +15,5 @@
     - 'Added french translations (thanks to @damsfx)'
 1.0.7:
     - 'Optimized handling of empty DateException collections'
+1.0.8:
+    - 'Fixed Location sorting'
