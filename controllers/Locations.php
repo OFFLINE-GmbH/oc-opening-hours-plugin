@@ -31,7 +31,7 @@ class Locations extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('OFFLINE.Openinghours', 'opening-hours-main');
+        BackendMenu::setContext('OFFLINE.OpeningHours', 'opening-hours-main');
     }
 
     public function onRelationManageCreate()
