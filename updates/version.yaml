@@ -17,3 +17,5 @@
     - 'Optimized handling of empty DateException collections'
 1.0.8:
     - 'Fixed Location sorting'
+1.0.9:
+    - 'Fixed active backend menu focus'
