@@ -27,8 +27,10 @@ tabs:
                         span: auto
                         type: datepicker
                         mode: time
+                        ignoreTimezone: true
                     to:
                         label: 'offline.openinghours::lang.hours.to'
                         mode: time
                         span: auto
                         type: datepicker
+                        ignoreTimezone: true

@@ -19,3 +19,5 @@
     - 'Fixed Location sorting'
 1.0.9:
     - 'Fixed active backend menu focus'
+1.0.10:
+    - 'Ignoring Timezones in datepicker widgets'
