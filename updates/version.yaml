@@ -21,3 +21,5 @@
     - 'Fixed active backend menu focus'
 1.0.10:
     - 'Ignoring Timezones in datepicker widgets'
+1.0.11:
+    - 'Added SK translations (thanks to @satezmedia)'
