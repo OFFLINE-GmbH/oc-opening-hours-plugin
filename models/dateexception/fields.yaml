@@ -4,6 +4,7 @@ fields:
         mode: date
         span: auto
         type: datepicker
+        ignoreTimezone: true
     note:
         label: 'offline.openinghours::lang.common.note'
         span: auto
