@@ -23,3 +23,5 @@
     - 'Ignoring Timezones in datepicker widgets'
 1.0.11:
     - 'Added SK translations (thanks to @satezmedia)'
+1.0.12:
+    - 'Fixed a timezone problem when using date exceptions'
