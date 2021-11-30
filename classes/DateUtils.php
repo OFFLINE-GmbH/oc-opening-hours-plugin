@@ -80,8 +80,12 @@ trait DateUtils
      *
      * @return array
      */
-    public function toTimeRange(array $values): array
+    public function toTimeRange($values): array
     {
+        if (!$values) {
+            return [];
+        }
+        
         return collect($values)->map(function ($values) {
             return static::getTime($values['from']) . '-' . static::getTime($values['to']);
         })->toArray();
