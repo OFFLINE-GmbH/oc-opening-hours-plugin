@@ -12,7 +12,7 @@ class CreateOfflineOpeninghoursException extends Migration
             $table->increments('id')->unsigned();
             $table->timestamp('for_date');
             $table->boolean('yearly')->default(0);
-            $table->text('hours');
+            $table->text('hours')->nullable();
             $table->string('note')->nullable();
             $table->integer('location_id')->unsigned();
             $table->timestamp('created_at')->nullable();
