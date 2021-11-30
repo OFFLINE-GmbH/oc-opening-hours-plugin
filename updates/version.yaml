@@ -28,3 +28,5 @@
 1.0.13:
     - 'Fixed table schema for exceptions without special hours on never MySQL versions'
     - make_exception_hours_nullable.php
+1.0.14:
+    - 'Fixed installation via Composer'
