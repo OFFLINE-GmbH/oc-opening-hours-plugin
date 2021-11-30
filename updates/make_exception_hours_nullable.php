@@ -11,4 +11,9 @@ class MakeExceptionHoursNullable extends Migration
             $table->string('hours')->nullable()->change();
         });
     }
+
+    public function down()
+    {
+        
+    }
 }
