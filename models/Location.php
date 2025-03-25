@@ -17,6 +17,9 @@ class Location extends Model
     public $slugs = [
         'slug' => 'name',
     ];
+    public $dates = [
+        'permanently_closed_until',
+    ];
     public $table = 'offline_openinghours_locations';
     public $rules = [
         'name' => 'required',
@@ -78,5 +81,18 @@ class Location extends Model
         $values['overflow'] = true;
 
         return $values->toArray();
+    }
+
+    public function getPermanentlyClosedAttribute()
+    {
+        if (!$this->is_permanently_closed) {
+            return false;
+        }
+
+        if ($this->permanently_closed_until === null) {
+            return true;
+        }
+
+        return $this->permanently_closed_until->isFuture();
     }
 }

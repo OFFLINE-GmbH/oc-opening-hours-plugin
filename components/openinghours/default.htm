@@ -33,14 +33,27 @@
         <h2 itemprop="name">{{ location.name }}</h2>
         <h3>Opening hours</h3>
 
-        {# This displays each day separately, if you need combined data (like Mo-Fr, Sa-So)  #}
-        {# Check out the combined.htm partial of this component. #}
-        {# partial __SELF__ ~ '::combined' location=location trans=trans #}
-        {% partial __SELF__ ~ '::week' location=location trans=trans %}
+        {% if location.permanentlyClosed %}
 
-        <h3>Special opening hours</h3>
+            <p>
+                {{ location.name }} is permanently closed
+                {% if location.permanently_closed_until %}
+                    until {{ location.permanently_closed_until.format('Y-m-d') }}
+                {% endif %}
+            </p>
 
-        {% partial __SELF__ ~ '::exceptions' location=location trans=trans %}
+        {% else %}
+
+            {# This displays each day separately, if you need combined data (like Mo-Fr, Sa-So)  #}
+            {# Check out the combined.htm partial of this component. #}
+            {# partial __SELF__ ~ '::combined' location=location trans=trans #}
+            {% partial __SELF__ ~ '::week' location=location trans=trans %}
+
+            <h3>Special opening hours</h3>
+
+            {% partial __SELF__ ~ '::exceptions' location=location trans=trans %}
+
+        {% endif %}
     </div>
 {% endfor %}
 

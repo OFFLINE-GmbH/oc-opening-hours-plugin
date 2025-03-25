@@ -1,3 +1,34 @@
+tabs:
+    fields:
+        hours:
+            tab: 'offline.openinghours::lang.common.hours'
+            type: partial
+            path: hours
+            context: update
+            span: left
+        is_permanently_closed:
+            label: 'offline.openinghours::lang.common.is_permanently_closed'
+            span: auto
+            type: checkbox
+            comment: 'offline.openinghours::lang.common.is_permanently_closed_comment'
+            tab: 'offline.openinghours::lang.common.hours'
+        permanently_closed_until:
+            label: 'offline.openinghours::lang.common.permanently_closed_until'
+            mode: datetime
+            span: right
+            trigger:
+                action: show
+                field: is_permanently_closed
+                condition: checked
+            type: datepicker
+            comment: 'offline.openinghours::lang.common.permanently_closed_until_comment'
+            tab: 'offline.openinghours::lang.common.hours'
+        exceptions:
+            span: right
+            path: exceptions
+            context: update
+            type: partial
+            tab: 'offline.openinghours::lang.common.hours'
 fields:
     name:
         label: 'offline.openinghours::lang.common.name'
@@ -10,19 +41,3 @@ fields:
             field: name
             type: slug
         type: text
-
-tabs:
-    fields:
-        hours:
-            tab: 'offline.openinghours::lang.common.hours'
-            type: partial
-            path: hours
-            context: update
-            span: left
-
-        exceptions:
-            tab: 'offline.openinghours::lang.common.hours'
-            type: partial
-            path: exceptions
-            context: update
-            span: right
