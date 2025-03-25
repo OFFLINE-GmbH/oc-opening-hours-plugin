@@ -42,7 +42,10 @@ class Location extends Model
         $data = $this->opening_hours_data;
         if (is_array($data) && OpeningHours::isValid($data)) {
             try {
-                $this->openingHours = OpeningHours::create($data);
+                $tz = config('offline.openinghours::timezone', 'UTC');
+                $outputTz = config('offline.openinghours::output_timezone', 'UTC');
+
+                $this->openingHours = OpeningHours::create($data, $tz, $outputTz);
             } catch (\Throwable $e) {
                 logger()->error(sprintf('Failed to initialize OpeningHours class: %s', $e->getMessage()), [$e]);
             }
